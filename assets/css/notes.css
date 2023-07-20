@@ -1,0 +1,70 @@
+@import "./style.css";
+
+.wrapper {
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.wrapper header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.wrapper header .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2.5rem;
+}
+
+.wrapper header .btn__add {
+  display: inline-block;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 1rem;
+  border: 1px solid var(--dark);
+  cursor: pointer;
+}
+.wrapper header .btn__add:hover {
+  background-color: var(--primary-color);
+}
+
+.wrapper header .tags .tags__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.wrapper header .tags .tags__list .tags__item {
+  border: 1px solid var(--dark);
+  border-radius: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.wrapper header .tags .tags__list .tags__item.active {
+  background-color: var(--primary-color);
+}
+
+.wrapper .cards__box .card__item {
+  max-width: 260px;
+  background-color: var(--secondary-color);
+  border-radius: 2rem;
+  padding: 1.5rem;
+}
+
+.wrapper .cards__box .card__item .card__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.wrapper .cards__box .card__item .card__title .ionicon {
+  width: 20px;
+  height: 20px;
+}
