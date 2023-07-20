@@ -2,9 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
 
 :root {
-  --primary-color: #ceff48;
-  --secondary-color: #d3b4fe;
-  --tertiary-color: #d2fd45;
+  --primary: #ceff48;
+  --secondary: #d3b4fe;
+  --tertiary: #a31df7;
   --dark: #21212f;
   --light: #fefefe;
 }
