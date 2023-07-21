@@ -62,8 +62,8 @@ const generateNotes = function (notes) {
 
 const generateTags = function (notes) {
   tagList.innerHTML = `
-    <li class="tags__item active">
-      <a class="tags__link" href="">#all</a>
+    <li onclick="showTags('#all')" class="tags__item">
+      <a class="tags__link" href="#">#all</a>
     </li>
   `;
   tagArr = [];
@@ -84,9 +84,29 @@ const generateTags = function (notes) {
   });
 };
 
+const selectQuery = function () {
+  const tagLinks = document.querySelectorAll(".tags__link");
+  const tagItems = document.querySelectorAll(".tags__item");
+  return {
+    first: tagLinks,
+    second: tagItems,
+  };
+};
+
 const showTags = function (noteTag) {
   const notes = getLocalStorage();
-  const notesTag = notes.filter((note) => note.tag === noteTag);
+  const queryResult = selectQuery();
+  const tagLinks = Array.from(queryResult.first);
+  const tagItems = Array.from(queryResult.second);
+
+  const notesTag =
+    noteTag !== "#all" ? notes.filter((note) => note.tag === noteTag) : notes;
+
+  const tagLink = tagLinks.find((item) => item.innerHTML === noteTag);
+  const tagItem = tagLink.closest(".tags__item");
+
+  tagItems.forEach((item) => item.classList.remove("active"));
+  tagItem.classList.add("active");
 
   generateNotes(notesTag);
 };
