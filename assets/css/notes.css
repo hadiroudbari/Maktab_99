@@ -81,8 +81,8 @@
 }
 
 .wrapper .cards__box .card__item {
-  background-color: var(--tertiary);
-  color: var(--light);
+  background-color: var(--secondary);
+  color: var(--dark);
   border-radius: 2rem;
   padding: 1.5rem;
 }
