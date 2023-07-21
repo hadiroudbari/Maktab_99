@@ -38,7 +38,7 @@ submitBtn.addEventListener("click", function (e) {
     generateToast(
       "Note added successfully",
       "linear-gradient(to right, #11998e, #38ef7d)",
-      1500,
+      1000,
       () => location.assign("./notes.html")
     );
   } else {
