@@ -9,3 +9,9 @@
   --dark: #21212f;
   --light: #fefefe;
 }
+
+body {
+  line-height: 1;
+  font-family: "Rubik", sans-serif;
+  overflow: hidden;
+}

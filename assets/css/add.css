@@ -2,6 +2,7 @@
 
 body {
   background-color: var(--primary);
+  font-family: "Rubik";
 }
 
 .wrapper {
@@ -21,13 +22,19 @@ body {
 }
 
 #text,
-#title {
+#title,
+#tag {
   background-color: var(--secondary);
   padding: 1rem;
+  font-family: inherit;
 }
 
 #title {
   font-size: 1.5rem;
+}
+
+#tag {
+  font-size: 1.2rem;
 }
 
 #text {
@@ -47,6 +54,7 @@ body {
   border-radius: 2rem;
   padding: 1rem 2rem;
   transition: all 0.4s ease-in-out;
+  font-family: inherit;
 }
 
 .actions button:nth-child(1) {
